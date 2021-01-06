@@ -1,0 +1,82 @@
+.top-nav {
+    // .logo is styled in _global.scss
+    background-color: $article-bg-1;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px 0;
+
+    div{
+        display: flex;
+        justify-content: space-between;    
+        align-items: center;
+    }
+    
+    p{
+        margin: 0;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;        
+        align-items: center;
+    }
+    li{
+        list-style-type: none;  
+        padding-left: 30px;          
+    }
+    a{
+        text-decoration: none;
+        color: $font-color;
+        font-weight: 700;
+    }
+}
+
+header{
+    background-image: url('../Assets/image-main.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom left;
+    height: 100vh;
+    @include flexCenter(row);
+    
+
+    div.flex-container{
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            padding: 50px;
+            text-align: center;  
+            margin: 10px;          
+            
+        h1{
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        h4{
+            font-family: $secondary-text;
+            font-size: 1.8rem;
+            font-weight: 200;
+
+        }
+
+        p{
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
+    }
+}
+
+@media (max-width: $tablet){
+    .top-nav div{
+        @include flexCenter(column);
+        ul{
+            flex:1 1 100%;
+            padding-left: 0;
+            li{
+                padding:0 10px;
+            }
+        }
+    }
+}

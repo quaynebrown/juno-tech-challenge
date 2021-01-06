@@ -1,0 +1,44 @@
+// variables start
+
+// $wrapper:80%;
+
+// @media width
+$tablet: 960px;
+
+// Landscape phone to portrait tablet 
+$portrait-phone: 768px;
+
+// Landscape phones and down
+$phone: 480px;
+
+// fonts
+$primary-text: 'Raleway', sans-serif;
+$secondary-text: 'Noto Serif', serif;
+
+// colors
+$highlight: #e40015;
+$article-bg-1: #F6F7F9;
+$article-bg-2: #ffffff;
+$font-color: #000000;
+$footer-bg: #231F1F;
+$footer-nav-bg: #444444;
+
+// wrapper max-width
+$wrapper-max-width: 1200px;
+
+// variables end
+
+
+// flexes a container and align child elements center, vertically and horizontally
+// it takes the arg of row or column
+@mixin flexCenter ($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+@function wrapper($wrapper-percentage){
+    @return $wrapper-percentage;
+}

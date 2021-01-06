@@ -1,0 +1,122 @@
+.featured-post{
+    padding: 80px 0;
+    background-color: $article-bg-1;
+    text-align: center;
+
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .article{
+        background-color: $article-bg-2;
+        display: flex;
+        margin: 15px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 350px;
+    }
+    
+    .image-container{
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    img{
+        position: absolute; 
+    }
+
+    .image-1{
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .image-2{
+        bottom:0;
+        right: 0;  
+        height: 100%; 
+    }
+
+    .image-3{
+        bottom: 0;
+        left: 0;
+        height: 120%;
+    }
+
+}
+
+@media (max-width: $tablet){
+    .featured-post{
+        .article{
+            max-width: 730px;
+    
+            .image-1{
+                width: 100%;
+                bottom: -120px;
+                left: 0;
+
+            }
+        
+            .image-2{
+                bottom: auto;
+                right: 0;  
+                height: 150%; 
+            }
+        
+            .image-3{
+                height: 150%;
+            }
+        } 
+    }
+}
+
+@media (max-width: $portrait-phone){
+    .featured-post{
+        .article{
+            .image-1{
+                width: 100%;
+                bottom: -110px;
+                left: 0;
+
+            }
+        
+            .image-2{
+                bottom: auto;
+                right: 0;  
+                height: 140%; 
+            }
+        
+            .image-3{
+                height: 130%;
+            }
+        } 
+    }
+}
+
+@media (max-width: $phone){
+    .featured-post{
+        .article{
+            .image-1{
+                width: 100%;
+                bottom: 0;
+                left: 0;
+            }
+        
+            .image-2{
+                bottom:0;
+                right: 0;  
+                height: 100%; 
+            }
+        
+            .image-3{
+                bottom: 0;
+                left: 0;
+                height: 120%;
+            }
+        } 
+    }
+}
+

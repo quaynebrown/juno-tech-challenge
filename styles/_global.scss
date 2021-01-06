@@ -1,0 +1,102 @@
+html{
+    font-size: 62.5%;   
+}
+
+body{
+    font-family: $primary-text;
+    font-size: 1.6rem;
+    color: $font-color;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+h2, h3{
+    text-transform: uppercase;
+    letter-spacing: 0.18rem;
+}
+
+h3{
+    margin: 0;
+}
+
+h4{
+    font-family: $secondary-text;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 5px;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.read-more-anchor{
+    color: $highlight;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.wrapper{
+    width: wrapper(80%);
+    margin: 0 auto;
+    max-width: $wrapper-max-width;
+}
+
+
+.tech-test{
+    padding: 30px 20px;
+}
+
+
+.read-more-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include flexCenter(row);
+    background-color: rgba(228, 0, 21, 0.7);
+    opacity: 0;
+    p{
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+.read-more-container:hover{
+    opacity: 1;
+}
+
+.nav-link a:hover,
+.footer-link a:hover,
+.footer-link i:hover,
+.read-more-anchor:hover{
+    font-weight: 900;
+    color: $highlight;
+}
+
+button[type="submit"]:hover,
+.form-1 .button-1:hover{
+    background-color: lighten($highlight, 15%)
+}
+
+.article-paragraph{
+    text-align: left;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+@media (max-width: $tablet){
+    .wrapper{
+        width: wrapper(90%);
+    } 
+}

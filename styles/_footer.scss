@@ -1,0 +1,130 @@
+footer{
+    color: white;
+    a{
+        color: white;
+        font-weight: 700;
+    }
+    .footer-nav{
+        background-color: $footer-nav-bg;
+        border-bottom: 2px solid black;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        p{
+            line-height: 2.5rem;
+        }
+    }
+
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .flex-container {
+        div:first-child{
+            flex:2 2;
+            min-width: 280px;
+        }
+
+        div:last-child{
+            flex:2 1;
+        } 
+    }
+
+    
+
+    form{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    [type="submit"],
+    [type="email"]{
+        height: 50px;
+        font-family: $primary-text;
+        margin: 0.2rem;
+    }
+
+    [type="email"]{
+        text-align: center;
+        font-family: $secondary-text;
+        border: none;
+        flex:2 1 60%;
+    }
+
+    [type="submit"]{
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color: $highlight;
+        color: $article-bg-1;
+        border: none;
+        font-weight: 700;
+        flex: 1 2 30%;
+    }
+
+    // footer logo styling start here
+    .social-media{
+        background-color: $footer-bg;
+        font-size: 2rem;
+
+        div.wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        p{
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        i{
+            padding-left: 10px;
+        }
+    }
+    // footer logo styling end here
+}
+
+@media (max-width: $tablet){
+    footer div.flex-container{
+        justify-content: column;
+        
+    }
+}
+
+@media (max-width: $portrait-phone){
+    footer div.flex-container{
+        // background-color: lightgrey;
+        flex-wrap: wrap;
+
+        div:first-child{
+            flex-basis:100%;
+        }
+        ul{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding:10px 5px;
+            flex-basis: 100%;
+            border: 1px dotted $article-bg-1;
+
+            li{
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+        div:last-child{
+            flex:100%;
+            margin-top: 10px;
+        } 
+        
+    }
+}
